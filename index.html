@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ranjna Clinic</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background: #f9f9f9;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 280px;
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .sidebar h1 {
+      margin: 0 0 20px 0;
+      font-size: 28px;
+      text-align: center;
+    }
+    .sidebar img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .sidebar img:hover {
+      transform: scale(1.1);
+    }
+    .sidebar .contact-info {
+      text-align: center;
+      line-height: 1.5;
+      font-size: 15px;
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 30px 40px;
+    }
+    .main-content h2 {
+      color: #34495e;
+      margin-bottom: 15px;
+    }
+    .main-content p {
+      font-size: 17px;
+      margin: 6px 0;
+      color: #555;
+    }
+
+    /* Slider */
+    .slider {
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 10px;
+      margin: 30px auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    .slides {
+      display: flex;
+      width: 500%;
+      animation: slide 20s infinite;
+    }
+    .slides img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0%); }
+      20% { transform: translateX(0%); }
+      25% { transform: translateX(-100%); }
+      40% { transform: translateX(-100%); }
+      45% { transform: translateX(-200%); }
+      60% { transform: translateX(-200%); }
+      65% { transform: translateX(-300%); }
+      80% { transform: translateX(-300%); }
+      85% { transform: translateX(-400%); }
+      100% { transform: translateX(-400%); }
+    }
+
+    /* Gallery */
+    .gallery {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 10px 5px;
+        justify-content: space-around;
+      }
+      .sidebar img {
+        width: 120px;
+        margin-bottom: 0;
+      }
+      .sidebar .contact-info {
+        display: none;
+      }
+      .main-content {
+        padding: 15px 20px;
+      }
+      .slider {
+        height: 220px;
+      }
+      .slides img {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h1>Ranjna Clinic</h1>
+    <img src="logo.jpg" alt="Clinic Logo" />
+    <img src="clinicstaff.webp" alt="Clinic Staff" />
+    <div class="contact-info">
+      <strong>Dr. Jaydip Dudhrejiya</strong><br />
+      Family Physician<br />
+      Degree: B.H.M.S. (C.C.H)<br />
+      Reg No: G-33257<br />
+      Mobile: 7046800282<br />
+      Address: Dalkhaniya, Gujarat
+    </div>
+  </aside>
+
+  <section class="main-content">
+    <h2>Welcome to Ranjna Clinic</h2>
+    <p>We provide expert family healthcare services with care, experience, and compassion you can trust. We are committed to promoting health and wellness in our community.</p>
+    <p><strong>Opening Hours:</strong> Monday to Sunday, 9 AM – 1 PM & 3 PM – 8 PM</p>
+    <p><strong>Emergency Contact:</strong> +91 7046800282</p>
+
+    <!-- Slider -->
+   
+    <!-- Gallery -->
+    <div class="gallery" aria-label="Clinic image gallery">
+      <img src="dr.jpeg" alt="Dr. Jaydip at work" />
+      <img src="clnic.jpg" alt="Clinic room" />
+      <img src="Clinic interior.webp" alt="Clinic interior" />
+      <img src="medicalservice.jpg" alt="Medical services" />
+      <img src="Treatment setup.jpg" alt="Treatment setup" />
+      <img src="Patients receiving care.jpeg" alt="Patients receiving care" />
+    </div>
+  </section>
+
+</body>
+</html>
